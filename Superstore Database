@@ -54,3 +54,22 @@ FROM superstore;
 SELECT *
 FROM superstore
 WHERE category = "Kitchen Supplies"
+
+#Listed below are queries I have come up with about the data.
+
+#Show a statistic about the average price for itms in the category of "Electronics".
+SELECT AVG(price)
+FROM superstore
+WHERE category = "Electronics";
+
+#Show a statistic about items costing 50 dollars or more being ordered by the price descending.
+SELECT *
+FROM superstore
+WHERE price >= 50
+ORDER BY price desc;
+
+#Show a statistic about items that have an average rating of 4.5 or more, in the order of ratings highest to lowest.
+SELECT *
+FROM superstore
+WHERE average_rating >= 4.5
+ORDER BY average_rating asc;
